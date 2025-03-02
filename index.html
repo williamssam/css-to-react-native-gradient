@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS to React Native Gradient Converter</title>
+		<link rel="stylesheet" href="./style.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="./script.js" defer></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>CSS to React Native Gradient Converter</h1>
+
+			<div class="description">
+				<p>
+					Convert CSS gradient code to React Native compatible format
+					for both Expo LinearGradient and
+					react-native-linear-gradient. Paste your CSS gradient code
+					below and get ready-to-use React Native code.
+				</p>
+			</div>
+
+			<div class="form-group">
+				<label for="css-input">CSS Gradient Code:</label>
+				<textarea
+					id="css-input"
+					placeholder="Paste CSS gradient here (e.g., linear-gradient(to right, #ff0000, #00ff00) or background: linear-gradient(90deg, #6F42C1 0%, #341F5B 100%))"
+				></textarea>
+			</div>
+
+			<div class="preview" id="preview"></div>
+
+			<button id="convert-btn">Convert</button>
+			<div id="error-message" class="error"></div>
+
+			<div class="tabs">
+				<div class="tab active" data-tab="expo">
+					Expo LinearGradient
+				</div>
+				<div class="tab" data-tab="rn">
+					React Native Linear Gradient
+				</div>
+			</div>
+
+			<div id="gradient-list" class="gradient-list"></div>
+
+			<div class="example-section">
+				<h3>Examples (Click to use):</h3>
+				<div class="examples">
+					<div
+						class="example"
+						style="
+							background: linear-gradient(
+								to right,
+								#ff416c,
+								#ff4b2b
+							);
+						"
+						data-gradient="linear-gradient(to right, #ff416c, #ff4b2b)"
+					></div>
+					<div
+						class="example"
+						style="
+							background: linear-gradient(
+								45deg,
+								#12c2e9,
+								#c471ed,
+								#f64f59
+							);
+						"
+						data-gradient="linear-gradient(45deg, #12c2e9, #c471ed, #f64f59)"
+					></div>
+					<div
+						class="example"
+						style="
+							background: linear-gradient(
+								to bottom,
+								#4facfe,
+								#00f2fe
+							);
+						"
+						data-gradient="linear-gradient(to bottom, #4facfe, #00f2fe)"
+					></div>
+					<div
+						class="example"
+						style="
+							background: linear-gradient(
+								90deg,
+								#6f42c1 0%,
+								#341f5b 100%
+							);
+						"
+						data-gradient="background: linear-gradient(90deg, #6F42C1 0%, #341F5B 100%), linear-gradient(270deg, rgba(111, 66, 193, 0.016) -14.29%, rgba(254, 237, 227, 0.4) 100%)"
+					></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
