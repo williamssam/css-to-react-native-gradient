@@ -33,7 +33,9 @@ convertBtn.addEventListener("click", convertGradient);
 // CSS input change handler
 inputEl.addEventListener("input", () => {
 	try {
-		previewEl.style.background = inputEl.value;
+		previewEl.style.background = inputEl.value.startsWith("background:")
+			? inputEl.value.substring("background:".length).trim()
+			: inputEl.value;
 		errorEl.textContent = "";
 	} catch (e) {
 		// Invalid CSS, but don't show error yet
