@@ -42,6 +42,7 @@ textarea {
 	resize: vertical;
 	min-height: 100px;
 	font-family: monospace;
+	resize: none;
 }
 button {
 	background-color: #1a73e8;
